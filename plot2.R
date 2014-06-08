@@ -8,13 +8,13 @@ loadHouseholdPowerConsumptionData <- function(path) {
   return(data)
 }
 
-#Draw a plo for Global Active Power 
-plot1 <- function(data, png.filename) {
-  hist(data$Global_active_power, main="Global Active Power",
-       xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
+#Plot2: Draw a plot for Global Active Power 
+plot2 <- function(data, png.filename) {
   
+  plot(data$Global_active_power~data$Datetime, type="l", ylab="Global Active Power (kilowatts)", xlab="")
+
   dev.copy(png, file=png.filename, height=480, width=480)
   dev.off()
 }
 
-plot1(loadData("household_power_consumption.txt"), "plot1.png")
+plot2(loadData("household_power_consumption.txt"), "plot2.png")
