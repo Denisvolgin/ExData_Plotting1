@@ -8,7 +8,7 @@ loadHouseholdPowerConsumptionData <- function(path) {
   return(data)
 }
 
-#Plot2: Draw a plot for Global Active Power 
+#Plot2: Draw a "step" plot for Global Active Power 
 plot2 <- function(data, png.filename) {
   
   plot(data$Global_active_power~data$Datetime, type="l", ylab="Global Active Power (kilowatts)", xlab="")
