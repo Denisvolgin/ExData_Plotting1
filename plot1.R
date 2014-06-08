@@ -8,7 +8,7 @@ loadHouseholdPowerConsumptionData <- function(path) {
   return(data)
 }
 
-#Draw a plo for Global Active Power 
+#Plot1: Draw a histogram for Global Active Power 
 plot1 <- function(data, png.filename) {
   hist(data$Global_active_power, main="Global Active Power",
        xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
