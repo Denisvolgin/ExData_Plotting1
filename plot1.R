@@ -1,4 +1,4 @@
-#load Household Power Consumption Data
+#Load the Household Power Consumption Data
 loadHouseholdPowerConsumptionData <- function(path) {
   data <- read.csv(path, sep=";", na.strings="?")
   data$Date <- as.Date(data$Date, format="%d/%m/%Y")
@@ -8,7 +8,7 @@ loadHouseholdPowerConsumptionData <- function(path) {
   return(data)
 }
 
-#draw a histogram for Global Active Power 
+#Draw a histogram for Global Active Power 
 plot1 <- function(data, png.filename) {
   hist(data$Global_active_power, main="Global Active Power",
        xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
